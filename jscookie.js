@@ -1,8 +1,8 @@
 /**
-*						JsCookie
+*			JsCookie
 *	A simple way to create cookies with javascript!
 *	@urielcaire
-	github: https://github.com/urielcaire/jscookie
+*	github: https://github.com/urielcaire/jscookie
 */
 
 function createCookie(name, value, days){
@@ -10,6 +10,7 @@ function createCookie(name, value, days){
 	if(days){
 		var time = new Date();
 		time.setTime(time.getTime()+(days*24*60*60*1000));
+		expires = "; expires="+time.toGMTString();
 	}
 	document.cookie = name+"="+value+expires+"; path=/";
 }
